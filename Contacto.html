@@ -12,9 +12,45 @@
         <ul>
           <li><a href="Index.html">Página Principal</a></li>
           <li><a href="EquipoMedico.html">EquipoMedico</a></li>
-          <li><a href="Reservar.html">Reservar Cita</a></li>
+          <li>
+            <button onclick="location.href='Reservar.html'">
+            Reservar Cita
+          </button></li>
         </ul>
       </nav>
     </header>
+
+    <!-- Formulario de contacto -->
+    <main>
+      <section>
+        <h2>Formulario de Contacto</h2>
+          <form>
+              <label for="nombre">Nombre:</label>
+              <input type="text" id="nombre" required>
+
+              <label for="correo">Correo Electrónico:</label>
+              <input type="email" id="correo" required>
+
+              <label for="asunto">Asunto:</label>
+              <input type="text" id="asunto" required>
+
+              <label for="mensaje">Mensaje:</label>
+              <textarea id="mensaje" rows="4" required></textarea>
+
+              <button type="submit">Enviar</button>
+          </form>
+      </section>
+
+        <!-- Mapa de ubicacion-->
+      <section>
+          <h2>Ubicación</h2>
+          <img src="Imagenes/mapa-hospital.png" alt="Mapa de la ubicación del hospital" width="500">
+      </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2024 Clinica Aguila. Todos los derechos reservados.</p>
+    </footer>
   </body>
 </html>
