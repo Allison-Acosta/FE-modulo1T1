@@ -3,18 +3,31 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title></title>
-
-    <img src="Imagenes/Icono hospitalj.jpg" alt="Icono Hospital" />
+    <title>Index</title> <!-- Titulo de la pagina -->
+    <img src="Imagenes/Icono hospital.jpg" alt="Icono Hospital" />
   </head>
   <body>
+    <!-- 
+    Dentro del <BODY> hay 3 secciones
+    <header> : Logotipo, titulo, navegacion principal, etc
+    <main> : parrafos, imagenes, videos, cualquier otro elemento 
+    <footer> : informacion adicional, derechos de autor, politicas de privacidad, info de contacto, etc.
+    -->
     <header>
       <h1>Clinica Ejercicio 1- Modulo 2</h1>
       <nav>
         <ul>
           <li><a href="Contacto.html">Contacto</a></li>
           <li><a href="EquipoMedico.html">Equipo Médico</a></li>
-          <li><a href="Reservar.html">Reservar Cita</a></li>
+          <!-- 
+          A un item de la lista se le agrega el boton con la propiedad:
+          onclick=location.href='pagina.html'
+
+          Cuando haces clic en el botón, se ejecuta la instrucción dentro de onclick. 
+          En este caso, location.href = 'Reservar.html' es un comando en JavaScript 
+          que redirige al navegador a la URL especificada (Reservar.html).
+          -->
+          <li><button onclick="location.href='Reservar.html'">Reservar Cita</button></li>
         </ul>
       </nav>
     </header>
@@ -29,30 +42,67 @@
       </section>
       <section>
         <h2>Servicios disponibles</h2>
-        <ul>
-          <li>Dermatología y cuidados de la piel</li>
-          <h5>
-            Nos especializamos en la prevencion de daños producidos por la
-            exposicion a factores ambientales como el sol y la contaminacion
-          </h5>
-          <li>Nutrición y dietética</li>
-          <h5>
-            Cada persona es diferente, por lo que entregamos planes de
-            alimentacion enfocados en el estilo de vida y los requerimientos de
-            cada paciente.
-          </h5>
-          <li>Psiquiatría y salud mental</li>
-          <h5>
-            Ofrecemos terapias psiquiatricas y psicologicas para cada paciente
-            segun la previa evaluacion profesional.
-          </h5>
-        </ul>
+          <ul>
+              <li>
+                  <img src="ruta_a_tu_imagen/dermatologia.png" alt="Dermatología">
+                  <strong>Dermatología y cuidados de la piel</strong>
+                  <h5>
+                      Nos especializamos en la prevención de daños producidos por la
+                      exposición a factores ambientales como el sol y la contaminación.
+                  </h5>
+              </li>
+              <li>
+                  <img src="ruta_a_tu_imagen/nutricion.png" alt="Nutrición" >
+                  <strong>Nutrición y dietética</strong>
+                  <h5>
+                      Cada persona es diferente, por lo que entregamos planes de
+                      alimentación enfocados en el estilo de vida y los requerimientos de
+                      cada paciente.
+                  </h5>
+              </li>
+              <li>
+                  <img src="ruta_a_tu_imagen/psiquiatria.png" alt="Psiquiatría">
+                  <strong>Psiquiatría y salud mental</strong>
+                  <h5>
+                      Ofrecemos terapias psiquiátricas y psicológicas para cada paciente
+                      según la previa evaluación profesional.
+                  </h5>
+              </li>
+          </ul>
       </section>
       <section>
         <h2>Testimonios</h2>
       </section>
     </main>
 
-    <footer></footer>
+    <footer>
+      <h3>Enlaces Rápidos</h3>
+      <ul>
+          <li><a href="Contacto.html">Contacto</a></li>
+          <li><a href="EquipoMedico.html">Equipo Médico</a></li>
+          <li><a href="Reservar.html">Reservar Cita</a></li>
+          <li><a href="Servicios.html">Servicios</a></li>
+      </ul>
+  
+      <h3>Información de Contacto</h3>
+      <p>Teléfono: (123) 456-7890</p>
+      <p>Email: contacto@hospital.com</p>
+      <p>Dirección: Calle Ejemplo 123, Ciudad, País</p>
+  
+      <h3>Redes Sociales</h3>
+      <!-- 
+          Se le agrega un target="_blank" para que el enlace te lo abra
+          en otra pestaña.
+          Es para mayor comodidad, si no lo tiene, abre el link en la misma pagina.
+          -->
+      <ul>
+          <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+          <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
+          <li><a href="https://www.instagram.coml" target="_blank">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company" target="_blank">LinkedIn</a></li>
+      </ul>
+  
+      <p>&copy; 2024 Hospital. Todos los derechos reservados.</p>
+    </footer>
   </body>
 </html>
