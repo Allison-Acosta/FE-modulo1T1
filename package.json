@@ -1,5 +1,8 @@
 {
   "devDependencies": {
     "stylelint": "^16.10.0"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
   }
 }
