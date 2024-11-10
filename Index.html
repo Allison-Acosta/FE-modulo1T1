@@ -5,47 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bienvenida Hospital</title>
     <!-- CSS General -->
-    <link rel="stylesheet" href="CSS/general.css" />
+    <link rel="stylesheet" href="main.css" />
 
     <!-- CSS Específico para esta página -->
-    <link rel="stylesheet" href="CSS/Index.css" />
+    <!-- <link rel="stylesheet" href="CSS/Index.css" />-->
   </head>
   <body>
-    <header>
-      <h1>Clinica Águila</h1>
+    <header class="header">
+      <h1 class="header__title">Clinica Águila</h1>
       <img src="Imagenes/Icono hospital.jpg" alt="Icono Hospital" width="100" />
       <nav>
-        <ul>
-          <li><a href="Contacto.html">Contacto</a></li>
-          <li><a href="EquipoMedico.html">Equipo Médico</a></li>
-          <li>
-            <button onclick="location.href='Reservar.html'">
-              Reservar Cita
+        <ul class="nav__list">
+          <li class="nav__item" class="nav__link">
+            <a href="Contacto.html">Contacto</a>
+          </li>
+          <li class="nav__item" class="nav__link">
+            <a href="EquipoMedico.html">Equipo Médico</a>
+          </li>
+          <li class="nav__item">
+            <button
+              class="button button--primary"
+              onclick="location.href='Reservar.html'"
+            >
+              <span class="button__text">Reservar Cita</span>
             </button>
           </li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section>
-        <h3>
-          Bienvenidos. En nuestra clínica, estamos comprometidos en brindarte el
-          apoyo que necesitas en todo momento. Nacimos con el propósito de
-          promover la prevención de enfermedades, enfocándonos en la atención
-          temprana y el fomento de hábitos de vida saludables.
+    <main class="main-content">
+      <section class="hero">
+        <h2 class="hero__title">Bienvenidos.</h2>
+        <h3 class="hero__text">
+          En nuestra clínica, estamos comprometidos en brindarte el apoyo que
+          necesitas en todo momento. Nacimos con el propósito de promover la
+          prevención de enfermedades, enfocándonos en la atención temprana y el
+          fomento de hábitos de vida saludables.
         </h3>
       </section>
       <section>
-        <h2>Servicios disponibles</h2>
-        <ul>
-          <li>
+        <h2 class="hero__title">Servicios disponibles</h2>
+        <ul class="nav__list">
+          <li class="nav__item">
             <img
               src="Imagenes/dermatologia.jpg"
               alt="Dermatología"
               width="100"
             />
-            <strong>Dermatología y cuidados de la piel</strong>
+            <h3 class="hero__text">
+              <strong>Dermatología y cuidados de la piel</strong>
+            </h3>
             <h5>
               Nos especializamos en la prevención de los efectos negativos
               causados por la exposición a factores ambientales, tales como la
@@ -59,13 +69,13 @@
             </h5>
           </li>
 
-          <li>
+          <li class="nav__item">
             <img
               src="Imagenes/nutricionista.avif"
               alt="Nutrición"
               width="100"
             />
-            <strong>Nutrición y dietética</strong>
+            <h3 class="hero__text"><strong>Nutrición y dietética</strong></h3>
             <h5>
               Sabemos que cada persona es única, por lo que diseñamos planes de
               alimentación personalizados, adaptados a las necesidades
@@ -77,9 +87,11 @@
             </h5>
           </li>
 
-          <li>
+          <li class="nav__item">
             <img src="Imagenes/psiquiatria.jpg" alt="Psiquiatría" width="100" />
-            <strong>Psiquiatría y salud mental</strong>
+            <h3 class="hero__text">
+              <strong>Psiquiatría y salud mental</strong>
+            </h3>
             <h5>
               En nuestra clínica ofrecemos terapias psiquiátricas y psicológicas
               personalizadas para cada paciente, basadas en una evaluación
@@ -93,63 +105,79 @@
           </li>
         </ul>
       </section>
-      <section>
-        <h2>Testimonios</h2>
-        <li>
-          <strong>María Ines Godoy</strong>
-          <h5>
+      <section class="hero">
+        <h2 class="hero__title">Testimonios</h2>
+        <div class="card card--highlight">
+          <h3 class="card__title"><strong>María Ines Godoy</strong></h3>
+          <h5 class="card__text">
             Asistí en febrero a la clinica por un problema de alimentación.
             Muchas gracias a todo el equipo. Nunca me habia sentido tan apoyada.
             Hoy estoy participando en el programa de seguimiento y sé que
             lograré mi objetivo de sentirme bien y sobretodo sana.
           </h5>
-        </li>
-        <li>
-          <strong>Fernando Tapia</strong>
-          <h5>
+        </div>
+        <div class="card card--highlight">
+          <h3 class="card__title"><strong>Fernando Tapia</strong></h3>
+          <h5 class="card__text">
             Gracias al equipo de dermatologia por todo el apoyo y orientación.
           </h5>
-        </li>
-        <li>
-          <strong>Fernando Tapia</strong>
-          <h5>
+        </div>
+        <div class="card card--highlight">
+          <h3 class="card__title"><strong>Fernando Tapia</strong></h3>
+          <h5 class="card__text">
             Se necesitan mas profesionales dedicados a la salud mental. Gracias
             a todos los que me apoyaron en mi recuperación.
           </h5>
-        </li>
+        </div>
       </section>
     </main>
 
-    <footer>
-      <h3>Enlaces Rápidos</h3>
-      <ul>
-        <li><a href="Contacto.html">Contacto</a></li>
-        <li><a href="EquipoMedico.html">Equipo Médico</a></li>
-        <li><a href="Reservar.html">Reservar Cita</a></li>
-        <li><a href="Servicios.html">Servicios</a></li>
+    <footer class="footer">
+      <h3 class="hero__text">Enlaces Rápidos</h3>
+      <ul class="nav__list">
+        <li class="nav__item" class="nav__link">
+          <a href="Contacto.html">Contacto</a>
+        </li>
+        <li class="nav__item" class="nav__link">
+          <a href="EquipoMedico.html">Equipo Médico</a>
+        </li>
+        <li class="nav__item" class="nav__link">
+          <a href="Reservar.html">Reservar Cita</a>
+        </li>
+        <li class="nav__item" class="nav__link">
+          <a href="Servicios.html">Servicios</a>
+        </li>
       </ul>
 
-      <h3>Información de Contacto</h3>
-      <p>Teléfono: (123) 456-7890</p>
-      <p>Email: contacto@hospital.com</p>
-      <p>Dirección: Calle Ejemplo 123, Ciudad, País</p>
+      <h3 class="hero__text">Información de Contacto</h3>
+      <p class="footer__text">Teléfono: (123) 456-7890</p>
+      <p class="footer__text">Email: contacto@hospital.com</p>
+      <p class="footer__text">Dirección: Calle Ejemplo 123, Ciudad, País</p>
 
-      <h3>Redes Sociales</h3>
+      <h3 class="hero__text">Redes Sociales</h3>
       <!-- 
           Se le agrega un target="_blank" para que el enlace te lo abra
           en otra pestaña.
           Es para mayor comodidad, si no lo tiene, abre el link en la misma pagina.
           -->
-      <ul>
-        <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
-        <li><a href="https://twitter.com" target="_blank">Twitter</a></li>
-        <li>
+      <ul class="nav__list">
+        <li class="nav__item" class="nav__link">
+          <a href="https://www.facebook.com" target="_blank">Facebook</a>
+        </li>
+        <li class="nav__item" class="nav__link">
+          <a href="https://twitter.com" target="_blank">Twitter</a>
+        </li>
+        <li class="nav__item" class="nav__link">
           <a href="https://www.instagram.coml" target="_blank">Instagram</a>
         </li>
-        <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
+        <li class="nav__item" class="nav__link">
+          <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+        </li>
       </ul>
 
-      <p>&copy; 2024 Clinica Aguila. Todos los derechos reservados.</p>
+      <p class="footer__text">
+        &copy; 2024 Clinica Aguila. Todos los derechos reservados.
+      </p>
     </footer>
   </body>
 </html>
