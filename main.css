@@ -1,11 +1,12 @@
 .footer {
   background-color: rgb(15, 63, 101);
   padding: 20px;
-  display: grid;
+  display: flex;
   font-family: "Raleway";
   color: rgb(255, 255, 255);
   justify-content: space-between;
   align-items: center;
+  text-align: center;
 }
 
 .footer__title {
@@ -54,6 +55,78 @@
   text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+  }
+  .footer__title {
+    font-size: 1rem;
+    margin-bottom: 10px;
+  }
+  .footer__nav-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__nav-item {
+    margin-bottom: 5px;
+  }
+  .footer__info-text {
+    margin: 5px 0;
+  }
+  .footer__social-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__social-item {
+    margin-bottom: 5px;
+  }
+}
+@media (max-width: 1024px) {
+  .footer {
+    flex-direction: column;
+    padding: 18px;
+  }
+  .footer__title {
+    font-size: 1.1rem;
+  }
+  .footer__nav-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__nav-item {
+    margin-bottom: 8px;
+  }
+  .footer__social-list {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__social-item {
+    margin-bottom: 8px;
+  }
+}
+@media (min-width: 1200px) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  .footer__nav-list {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer__nav-item {
+    margin-right: 20px;
+  }
+  .footer__social-list {
+    display: flex;
+    flex-direction: row;
+  }
+  .footer__social-item {
+    margin-right: 20px;
+  }
+}
 .header {
   background-color: rgb(15, 63, 101);
   padding: 20px;
@@ -98,7 +171,7 @@ a {
   text-decoration: none;
 }
 a:hover {
-  color: #5d023c;
+  color: #eeb6d9;
 }
 
 .main-content {
@@ -109,7 +182,7 @@ a:hover {
 
 .grid-container {
   display: grid;
-  grid-template-areas: "top top top top top top" "subheader subheader subheader subheader subheader subheader" "team team team team team team" "leftt middlee rightt lastright lastright lastright" "bottom bottom bottom bottom bottom bottom";
+  grid-template-areas: "top top top top" "subheader subheader subheader subheader " "team team team team" "leftt point rightt lastright ";
   grid-column-gap: 10px;
 }
 
@@ -129,8 +202,8 @@ a:hover {
   grid-area: leftt;
 }
 
-.middlee {
-  grid-area: middlee;
+.point {
+  grid-area: point;
 }
 
 .rightt {
@@ -141,18 +214,28 @@ a:hover {
   grid-area: lastright;
 }
 
-.footer {
-  grid-area: footer;
-}
-
 .hero__title {
   position: relative;
   top: 10px;
   left: 5px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .grid-container {
-    grid-template-areas: "top top top top top top" "subheader subheader subheader subheader subheader subheader" "team team team team team team" "leftt leftt leftt leftt leftt leftt" "rightt rightt rightt rightt rightt rightt" "lastright lastright lastright lastright lastright lastright" "bottom bottom bottom bottom bottom bottom";
+    grid-template-areas: "top top top top" "subheader subheader subheader subheader" "team team team team" "leftt leftt leftt leftt" "point point point point" "rightt rightt rightt rightt" "lastright lastright lastright lastright";
   }
+}
+/*CSS 00CSS */
+.card {
+  margin: 15px;
+  padding: 20px;
+  border: 1px 23px;
+}
+
+.card--highlight {
+  box-shadow: 0 4px 10px rgba(5, 8, 36, 0.2);
+}
+
+.card--shadow {
+  background-color: rgb(16, 8, 88);
 }/*# sourceMappingURL=main.css.map */
