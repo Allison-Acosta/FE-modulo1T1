@@ -56,7 +56,7 @@
     }
 
     a{
-        color: #3498db; 
+        color: #95c7d9; 
         text-decoration: none;
 
         // Cuando el enlace se pase el ratón por encima (hover)
@@ -65,3 +65,12 @@
         }
         
     }
+
+    .header .nav__link a { 
+        color: antiquewhite;
+        text-decoration: none;
+      }
+      
+      .header .nav__link a:hover {
+        color: #eeb6d9;
+      }
