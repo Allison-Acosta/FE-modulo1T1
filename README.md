@@ -26,3 +26,4 @@ La tarea 2 se abre a partir del entrega-tarea-3
 una especie de "tabla" que se ve en la pantalla de equipo medico al cambiar la pantalla.
 
 - Se instaló bootstrap y se incluyo en un archivo vendors/boostrap.scss
+- Quitó el uso del \_cards.scss y el \_button.scss ; estos estilos ahora vienen de boostrap.
