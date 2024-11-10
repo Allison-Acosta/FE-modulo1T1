@@ -15,8 +15,6 @@ La tarea 2 se abre a partir del entrega-tarea-3
 - Desde el terminal se usa sass scss/main.scss CSS/main.css
   o... bajar Live Sass Compiler V.6.1.2 (lo mejor del mundo)
 
-¿Sass 7-1?
-
 - Usé Sass 7-1
 - En components tengo 2 archivos: button.scss y cardss.scss;
   Con ellos manejo la estetica y eventos de los botones y los cuadros respectivamente.
@@ -27,3 +25,4 @@ una especie de "tabla" que se ve en la pantalla de equipo medico al cambiar la p
 
 - Se instaló bootstrap y se incluyo en un archivo vendors/boostrap.scss
 - Quitó el uso del \_cards.scss y el \_button.scss ; estos estilos ahora vienen de boostrap.
+- La recursividad tambien viene desde bootstrap
