@@ -10,7 +10,7 @@ $btn-outline-primary-color: #ffffff;   // Color del texto para los botones outli
 @import 'vendors/bootstrap';
 
 
-//@import 'components/button';
+@import 'components/mixins';
 @import 'layout/header';
 @import 'layout/cuerpo';
 @import 'layout/footer';
