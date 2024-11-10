@@ -56,12 +56,12 @@
     }
 
     a{
-        color: #3498db; // Un color azul por ejemplo
-        text-decoration: none; // Quitar el subrayado por defecto
+        color: #3498db; 
+        text-decoration: none;
 
         // Cuando el enlace se pase el ratón por encima (hover)
         &:hover {
-            color: #eeb6d9; // Un color más oscuro para el hover
+            color: #eeb6d9;
         }
         
     }
