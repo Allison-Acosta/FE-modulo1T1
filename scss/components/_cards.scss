@@ -1,15 +1,14 @@
 /*CSS 00CSS */
 
-.card{
+.maincard{
     margin: 15px;
     padding:  20px;
-    border: 1px 23px;
 }
 
-.card--highlight{
-    box-shadow: 0 4px 10px rgba(5, 8, 36, 0.2);
-    
+.card--highlight {
+    box-shadow: 0 4px 10px rgba(5, 8, 36, 0.2) !important;
 }
-.card--shadow{
+
+.card--shadow {
     background-color: rgb(16, 8, 88);
 }
