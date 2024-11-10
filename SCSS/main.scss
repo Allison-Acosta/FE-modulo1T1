@@ -1,0 +1,25 @@
+$mobile: 768px;
+$tablet: 1024px;
+$desktop: 1200px;
+
+@import 'abstract/variables';
+@import 'base/normalize';
+@import 'components/button';
+@import 'layout/header';
+@import 'layout/cuerpo';
+@import 'layout/footer';
+@import 'pages/contacto';
+@import 'pages/equipomedico';
+@import 'pages/home';
+@import 'themes/default';
+
+
+
+
+
+
+
+
+
+
+

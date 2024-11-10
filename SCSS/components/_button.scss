@@ -9,8 +9,8 @@
 
 
 .button--primary{
-background-color: chocolate;
-color:#fff;
+background-color: rgb(255, 255, 255);
+color:#273076;
 }
 
 
@@ -27,7 +27,7 @@ color:#fff;
 /*ESTADOS*/
 button:hover{
 
-    background-color: darkgreen;
+    background-color: rgb(166, 209, 218);
 }
 
 .dark-theme .button:hover{
