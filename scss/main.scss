@@ -4,9 +4,11 @@ $desktop: 1200px;
 
 
 //$bs-btn-padding-x : 3rem;
-$btn-outline-primary-bg: transparent;  // Fondo transparente para los botones outline
+
+$btn-outline-primary-bg: var(--bd-violet-bg);;  // Fondo transparente para los botones outline
 $btn-outline-primary-border: #36a810;  // Color del borde para los botones outline
 $btn-outline-primary-color: #ffffff;   // Color del texto para los botones outline
+$btn-color: #ffffff;
 @import 'vendors/bootstrap';
 
 
