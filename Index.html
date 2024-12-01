@@ -47,8 +47,15 @@
       </section>
       <section>
         <h2 class="hero__title">Servicios disponibles</h2>
+        <button type="submit" onclick="filtrarServicios()">
+          Solo disponibles
+        </button>
+        <button type="submit" onclick="mostrarServicios()">
+          Mostrar todos
+        </button>
+
         <ul class="nav__list">
-          <li class="nav__item">
+          <li class="nav__item" data-disponible="true">
             <img
               src="Imagenes/dermatologia.jpg"
               alt="Dermatología"
@@ -70,7 +77,7 @@
             </h5>
           </li>
 
-          <li class="nav__item">
+          <li class="nav__item" data-disponible="true">
             <img
               src="Imagenes/nutricionista.avif"
               alt="Nutrición"
@@ -88,7 +95,7 @@
             </h5>
           </li>
 
-          <li class="nav__item">
+          <li class="nav__item" data-disponible="true">
             <img src="Imagenes/psiquiatria.jpg" alt="Psiquiatría" width="100" />
             <h3 class="hero__text">
               <strong>Psiquiatría y salud mental</strong>
@@ -103,6 +110,27 @@
               paciente pueda encontrar las herramientas necesarias para su
               recuperación y crecimiento personal.
             </h5>
+          </li>
+
+          <li class="nav__item" data-disponible="false">
+            <h3 class="hero__text">
+              <strong>Kinesiología</strong>
+            </h3>
+            <h5>Proximo servicio disponible. A partir de Junio 2025.</h5>
+          </li>
+
+          <li class="nav__item" data-disponible="false">
+            <h3 class="hero__text">
+              <strong>Ginecología</strong>
+            </h3>
+            <h5>Proximo servicio disponible. A partir de Agosto 2025.</h5>
+          </li>
+
+          <li class="nav__item" data-disponible="false">
+            <h3 class="hero__text">
+              <strong>Atención Dental</strong>
+            </h3>
+            <h5>Proximo servicio disponible. A partir del 2026.</h5>
           </li>
         </ul>
       </section>
@@ -124,7 +152,7 @@
           </h5>
         </div>
         <div class="card maincardt">
-          <h3 class="card-header"><strong>Fernando Tapia</strong></h3>
+          <h3 class="card-header"><strong>Fabiola Camposano</strong></h3>
           <h5 class="card-body">
             Se necesitan mas profesionales dedicados a la salud mental. Gracias
             a todos los que me apoyaron en mi recuperación.
@@ -180,5 +208,7 @@
         &copy; 2024 Clinica Aguila. Todos los derechos reservados.
       </p>
     </footer>
+
+    <script src="utils/algorithem.js"></script>
   </body>
 </html>
