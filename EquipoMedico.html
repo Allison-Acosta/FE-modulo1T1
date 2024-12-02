@@ -49,51 +49,107 @@
         <h2 class="team">Nuestos Jefes de Departamento</h2>
         <!-- team -->
         <div class="leftt">
-          <h3 class="hero__text">
-            <strong>Director Medico: Andres Figueroa</strong>
-          </h3>
-          <img src="Imagenes/Med1.PNG" alt="Andres Figueroa" />
-          <h5>
-            Director médico con 20 años de experiencia, dedicado a ofrecer
-            atención de calidad y a liderar equipos en la implementación de
-            prácticas médicas innovadoras.
-          </h5>
+          <section>
+            <h3 class="hero__text">
+              <strong>Director Medico: Andres Figueroa</strong>
+            </h3>
+          </section>
+          <button type="submit" onclick="mostrarContacto('Andres Figueroa')">
+            Contacto
+          </button>
+          <section>
+            <img src="Imagenes/Med4.PNG" alt="Andres Figueroa" />
+          </section>
+          <section>
+            <h5>
+              Director médico con 20 años de experiencia, dedicado a ofrecer
+              atención de calidad y a liderar equipos en la implementación de
+              prácticas médicas innovadoras.
+            </h5>
+          </section>
         </div>
 
         <div class="point">
-          <h3 class="hero__text">
-            <strong>Director Medico: Andres Figueroa</strong>
-          </h3>
-          <img src="Imagenes/Med2.PNG" alt="Andres Figueroa" />
-          <h5>
-            Director médico con 20 años de experiencia, dedicado a ofrecer
-            atención de calidad y a liderar equipos en la implementación de
-            prácticas médicas innovadoras.
-          </h5>
+          <section>
+            <h3 class="hero__text">
+              <strong>Jefe de Dermatología: Miguel Zegpi</strong>
+            </h3>
+          </section>
+          <section>
+            <button type="submit" onclick="mostrarContacto('Miguel Zegpi')">
+              Contacto
+            </button>
+          </section>
+          <section>
+            <img src="Imagenes/Med3.PNG" alt="Miguel Zegpi" />
+          </section>
+          <section>
+            <h5>
+              Jefe del Departamento de Dermatología. Con 10 años de experiencia
+              y especialidad en trastornos de la piel causados por radiación y
+              factores externos.
+            </h5>
+          </section>
         </div>
 
         <div class="rightt">
-          <h3 class="hero__text">
-            <strong>Jefe de Nutrición: Miguel Zegpi</strong>
-          </h3>
-          <img src="Imagenes/Med3.PNG" alt="Miguel Zegpi" />
-          <h5>
-            Jefe del Departamento de Nutrición, especialista en obesidad y
-            trastornos alimenticios, enfocado en planes personalizados para una
-            salud integral y sostenible.
-          </h5>
+          <section>
+            <h3 class="hero__text">
+              <strong>Jefe de Nutrición: Alicia Stroke </strong>
+            </h3>
+          </section>
+          <section>
+            <button type="submit" onclick="mostrarContacto('Alicia Stroke')">
+              Contacto
+            </button>
+          </section>
+          <section>
+            <img src="Imagenes/Med2.PNG" alt="Alicia Stroke " />
+          </section>
+          <section>
+            <h5>
+              Jefe del Departamento de Nutrición, especialista en obesidad y
+              trastornos alimenticios, enfocado en planes personalizados para
+              una salud integral y sostenible.
+            </h5>
+          </section>
         </div>
 
         <div class="lastright">
-          <h3 class="hero__text">
-            <strong>Jefe de Nutrición: Miguel Zegpi</strong>
-          </h3>
-          <img src="Imagenes/Med4.PNG" alt="Miguel Zegpi" />
-          <h5>
-            Jefe del Departamento de Nutrición, especialista en obesidad y
-            trastornos alimenticios, enfocado en planes personalizados para una
-            salud integral y sostenible.
-          </h5>
+          <section>
+            <h3 class="hero__text">
+              <strong>Jefe de Psiquiatría: Ana María Figg</strong>
+            </h3>
+          </section>
+          <section>
+            <button type="submit" onclick="mostrarContacto('Ana María Figg')">
+              Contacto
+            </button>
+          </section>
+          <section>
+            <img src="Imagenes/Med1.PNG" alt="Ana María Figg" />
+          </section>
+          <section>
+            <h5>
+              Jefe del Departamento de Psiquiatría, especialista en trastornos
+              de la personalidad y personalidad limitrofe.
+            </h5>
+          </section>
+        </div>
+      </section>
+
+      <section class="grid-container">
+        <div class="leftt">
+          <button type="submit" onclick="mostrarMedicosDisponibles()">
+            Medicos disponibles
+          </button>
+          <li class="medDisponibles"></li>
+        </div>
+        <div class="point">
+          <button type="submit" onclick="mostrarMedicosNoDisponibles()">
+            Medicos sin disponibilidad
+          </button>
+          <li class="medNoDisponibles"></li>
         </div>
       </section>
     </main>
@@ -162,5 +218,7 @@
         &copy; 2024 Clinica Aguila. Todos los derechos reservados.
       </p>
     </footer>
+
+    <script src="utils/metodos.js"></script>
   </body>
 </html>
