@@ -1,13 +1,15 @@
-# MODULO 3 - Taller 2: Integración de Funcionalidades Básicas de JavaScript en el Sitio Web del Hospital
+# MODULO 3 - Laboratorio 1
 
 Allison Acosta
 
-1. Manejo del Entorno de Ejecución y Consola:
-   en Contacto.html se agrega una funcion al apretar el boton enviar.
-   Se verifican los datos entregados y se envian mensajes al usuario.
-   Esto se hace mediante la funcion reviewInformation en algorithem.js.
+1. Se crea el archivo medicos.json
+   Se crea una estructura con los datos de "nombre", "especialidad", "años", "disponibilidad",
+   y los ojetos anidados "horarios" con atributos "AM" y "PM" y el objeto anidado "contacto" con los atributos "telefono" y "mail".
 
-   console.log() .. en la funcion reviewInformation() de algorithem.js Lo uso para ver los datos ingresados por el usuario antes y despues de la revision de enviar el mensaje
+2. En EquipoMedico.html se crean botones para ver la informacion de contacto de los medicos.
+   Esta funcion esta en metodos.js. muestral la informacion del medico luego de filtrarse por el parametro "nombre" y usando destructuring.
 
-2. Para los servicios disponibles, se agregan 2 botones en la pagina principal para filtrar los servicios disponibles vs los servicios proximos.
-   Se editó el Index.html y se agregaron 2 funciones en algorithem.js: filtrarServicios() y mostrarServicios()
+3. En EquipoMedico.html se crean botones que muestran los medicos disponibles y no disponibles segun los parametros del medicos.json
+   Estos botones muestran en consola los datos de los medicos con el uso de stringify.
+
+4. En los enlaces rapidos del footer, se agrega un enlace para gestion de medicos.
