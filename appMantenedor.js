@@ -55,6 +55,9 @@ function agregarMedico() {
     alert("Nuevo funcionario agregado!");
 }
 
+
+
+
 function mostrarMedicos() {
     const inventario = cargarInventario();
     const output = document.getElementById("output");

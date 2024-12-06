@@ -97,3 +97,40 @@ function mostrarMedicosNoDisponibles() {
         });
     })    
 }
+
+
+function reservarCita()
+{
+    const nombre = prompt("Indique el nombre del paciente:");
+
+    // Validación del número de teléfono (9 dígitos)
+    let telefono = prompt("Indique un teléfono de contacto (9 dígitos):");
+    while (!/^\d{9}$/.test(telefono)) {
+        alert("El número de teléfono debe tener exactamente 9 dígitos.");
+        telefono = prompt("Teléfono (9 dígitos):");
+    }
+    telefono = parseInt(telefono, 10);  // Convertimos el teléfono a número
+
+    const paciente = {
+        nombre,
+       telefono
+    };
+
+    const inventario = cargarPaciente();
+    inventario.push(paciente);
+    guardarPaciente(inventario);
+    alert("Cita agendada con éxito!");
+
+}
+
+function crearPilaPacientes()
+{
+    
+
+
+}
+
+function crearColaPaciente()
+{
+
+}
