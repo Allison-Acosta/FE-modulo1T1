@@ -7,6 +7,7 @@
     <!-- CSS General -->
     <link rel="stylesheet" href="scss/main.css" />
   </head>
+  
   <body>
     <header class="header">
       <h1 class="header__title">Nuestro Equipo Médico</h1>
@@ -24,7 +25,7 @@
               class="btn btn-outline-primary btn-lg rounded-pill"
               onclick="location.href='Reservar.html'"
             >
-              <span class="button__text">Reservar Cita</span>
+              <span class="button__text" onclick="reservarCita()">Reservar Cita</span>
             </button>
           </li>
         </ul>
@@ -60,6 +61,17 @@
           alt="Mapa de la ubicación del hospital"
           width="500"
         />
+      </section class = "hero">
+          <h2 class="hero__title">Citas pacientes</h2>
+          <button type="submit" onclick="crearPilaPacientes()">Revisar proximas horas</button>      
+          <li class="ProximoPaciente"></li>
+
+          <button type="submit" onclick="crearColaPaciente()"> Pacientes en espera </button>        
+          <li class="SalaEspera"></li>
+      <section >
+
+
+
       </section>
     </main>
 
@@ -78,6 +90,9 @@
         </li>
         <li class="nav__item" class="nav__link">
           <a href="Servicios.html">Servicios</a>
+        </li>
+        <li class="nav__item" class="nav__link">
+          <a href="MantenedorMedico.html">Mantenedor Medico</a>
         </li>
       </ul>
 
@@ -113,5 +128,6 @@
     </footer>
 
     <script src="utils/algorithem.js"></script>
+    <script src="utils/metodos.js"></script>
   </body>
 </html>

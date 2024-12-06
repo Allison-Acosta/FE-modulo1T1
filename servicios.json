@@ -1,0 +1,19 @@
+[{"nombre": "Dermatologia", 
+"disponibilidad": true    
+}, 
+{"nombre": "Nutricion", 
+"disponibilidad": true    
+},
+{"nombre": "Psiquiatria", 
+"disponibilidad": true    
+},
+{"nombre": "Kinesiologia", 
+"disponibilidad": false    
+},
+{"nombre": "Ginecologia", 
+"disponibilidad": false    
+},
+{"nombre": "Atencion Dental", 
+"disponibilidad": false    
+}
+]

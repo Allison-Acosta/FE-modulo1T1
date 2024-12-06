@@ -106,3 +106,67 @@ function mostrarServicios() {
       
     });
   }
+
+
+  /* Funciones relacionadas al mantenedor de los medicos*/
+  // Búsqueda secuencial
+function buscarProducto(inventario, nombre) {
+    return inventario.find((producto) => producto.nombre === nombre);
+}
+
+// Ordenamiento por burbuja
+function ordenarPorNombre(inventario) {
+    for (let i = 0; i < inventario.length; i++) {
+        for (let j = 0; j < inventario.length - i - 1; j++) {
+
+            // Reviso los nombres que esta comparando en consola
+            console.log (inventario[j].nombre + " vs " + inventario[j+1].nombre);
+
+            if (inventario[j].nombre > inventario[j + 1].nombre) 
+                {
+                    [inventario[j], inventario[j + 1]] = [inventario[j + 1], inventario[j]];
+                }
+        }
+    }
+    return inventario;
+}
+function ordenarPorEspecialidad(inventario) {
+    for (let i = 0; i < inventario.length; i++) {
+        for (let j = 0; j < inventario.length - i - 1; j++) {
+            
+            // Reviso los nombres que esta comparando en consola
+            console.log (inventario[j].especialidad + " vs " + inventario[j+1].especialidad);
+
+            if (inventario[j].especialidad > inventario[j + 1].especialidad) 
+                {
+                    [inventario[j], inventario[j + 1]] = [inventario[j + 1], inventario[j]];
+                }
+        }
+    }
+    return inventario;
+}
+
+
+// Convertir JSON
+function cargarInventario() {
+    const data = localStorage.getItem("medicos");
+
+    //console.log(data);
+    return data ? JSON.parse(data) : [];
+}
+
+function guardarInventario(medicos) {
+    // Reviso el dato a guardar:
+    console.log("Se guardará el siguiente dato");
+    console.log(JSON.stringify(medicos));
+    localStorage.setItem("medicos", JSON.stringify(medicos));
+}
+
+function cargarDatosIniciales() {
+    fetch("medicos.json")
+    .then((response) => response.json())
+    .then((data) => {
+        guardarInventario(data);
+        mostrarMedicos();
+    });
+}
