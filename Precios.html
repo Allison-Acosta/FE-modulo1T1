@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="scss/main.css" />
   </head>
 
+
+
   <body>
     <header class="header">
-      <h1 class="header__title">Contacto</h1>
+      <h1 class="header__title">Aranceles</h1>
       <nav>
         <ul class="nav__list">
           <li class="nav__item" class="nav__link">
@@ -26,10 +28,9 @@
             <button
               type="button"
               class="btn btn-outline-primary btn-lg rounded-pill"
+              
             >
-              <span class="button__text" onclick="reservarCita()"
-                >Reservar Cita</span
-              >
+              <span class="button__text" onclick="reservarCita()">Reservar Cita</span>
             </button>
           </li>
         </ul>
@@ -37,53 +38,29 @@
     </header>
 
     <!-- Formulario de contacto -->
-    <main class="main-content">
-      <section class="hero">
-        <h2 class="hero__title">Formulario de Contacto</h2>
-        <form id="formulario">
-          <label for="nombre">Nombre:</label>
-          <input type="text" id="nombre" required />
+    <main class="main-content">      
+      <section class = "hero" >
+        <h2 class="hero__title">Precios y ofertas</h2>
+        <nav>
+            <h5> Por 2 o mas consultas se harán descuentos! Pida su presupuesto</h5>
+            <button type="submit" onclick="consultaSimple(1)">1 consulta</button>    
+        </nav>
+        <nav>
+            <button type="submit" onclick="consultaSimple(2)"> 2 consultas (igual servicios) </button>        
+        </nav>
+        <nav>
+            <button type="submit" onclick="consultaMixta(2)"> 2 consultas (múltiples servicios) </button>     
+        </nav>
+             
+       
+        
+    
+           
+        
 
-          <label for="correo">Correo Electrónico:</label>
-          <input type="email" id="correo" required />
-
-          <label for="asunto">Asunto:</label>
-          <input type="text" id="asunto" required />
-
-          <label for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" rows="4" required></textarea>
-
-          <button type="submit" onclick="reviewInformation()">Enviar</button>
-        </form>
       </section>
 
-      <!-- Mapa de ubicacion-->
-      <section class="hero">
-        <h2 class="hero__title">Ubicación</h2>
-        <img
-          src="Imagenes/mapa-hospital.png"
-          alt="Mapa de la ubicación del hospital"
-          width="500"
-        />
-      </section>
 
-      <section class="hero">
-        <h2 class="hero__title">Citas pacientes</h2>
-        <button type="submit" onclick="crearPilaPacientes()">
-          Revisar proximas horas
-        </button>
-        <li class="ProximoPaciente"></li>
-
-        <button type="submit" onclick="crearColaPaciente()">
-          Pacientes en espera
-        </button>
-        <li class="SalaEspera"></li>
-
-        <button type="submit" onclick="evaluarTiempodeEspera()">
-          Evaluar tiempo de espera
-        </button>
-        <li class="TiempoEspera"></li>
-      </section>
     </main>
 
     <!-- Pie de página -->
@@ -141,4 +118,7 @@
     <script src="utils/algorithem.js"></script>
     <script src="utils/metodos.js"></script>
   </body>
+</html>
+
+
 </html>

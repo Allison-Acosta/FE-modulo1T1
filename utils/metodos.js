@@ -123,6 +123,9 @@ function reservarCita()
 
 }
 
+// FUNCIONES SALA DE ESPERA
+
+
 function crearPilaPacientes()
 {
     
@@ -134,3 +137,75 @@ function crearColaPaciente()
 {
 
 }
+
+const tiempos = [10, 15, 20, 5, 30];  // tiempos en minutos
+const calcularPromedioEspera = (tiemposEspera) => 
+    tiemposEspera.reduce((total, tiempo) => total + tiempo, 0);
+
+function evaluarTiempodeEspera()
+{
+      const espera = calcularPromedioEspera(tiempos);
+      console.log(espera);  // 16
+
+    // Seleccionamos el contenedor de la lista
+    const contenedor = document.querySelector('.TiempoEspera');
+    
+    // Limpiamos el contenedor antes de agregar los elementos
+    contenedor.innerHTML = '';
+    contenedor.textContent = "El tiempo de espera es: "+espera+ " minutos."
+
+      // una ves que se pregunta, habran 2 eventos con espera de 3.5 segundo donde llegará un nuevo paciente, y el tiempo de espera se actualizara
+      setTimeout(() => {
+        alert("Ha llegado un nuevo paciente.");
+        tiempos.push(20);
+    },3500);
+    setTimeout(() => {
+        alert("Ha llegado un nuevo paciente");
+        tiempos.push(30);
+    },7000);
+}
+
+
+// METODOS PARA PRESUPUESTOS
+const precioConsulta = 25000;
+const aplicarDescuento = (descuento) => (costo) => costo * (1 - descuento);
+
+function consultaSimple(numero)
+{
+    alert("Calculando presupuesto...");
+
+    const costo = numero * precioConsulta;
+    const descuento = numero >= 2 ? 0.3 : 0; 
+    const aplicarDescuentoFunc = aplicarDescuento(descuento);
+    setTimeout(() => {
+        alert("Presupuesto: $" + aplicarDescuentoFunc(costo) + ". Por " + numero + " consultas.");
+    },3000);
+
+}
+
+function consultaMixta(numero)
+{    
+    alert("Calculando presupuesto...");
+    const costo = numero * precioConsulta;
+    const descuento = numero >= 2 ? 0.2 : 0; 
+    const aplicarDescuentoFunc = aplicarDescuento(descuento);
+    setTimeout(() => {
+        alert("Presupuesto: $" + aplicarDescuentoFunc(costo) + ". Por " + numero + " consultas diferentes.");
+    },3000);
+}
+
+
+
+// metodo listener para el envio de formulario de contacto
+document.addEventListener("DOMContentLoaded", () => {
+    const formulario = document.getElementById("formulario");
+    formulario.addEventListener("submit", (evento) => {
+        
+        evento.preventDefault();
+    
+        
+        alert("Formulario enviado con éxito. ¡Gracias por tu interés!");
+        
+        
+      });
+    });
