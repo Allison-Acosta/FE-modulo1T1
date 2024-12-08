@@ -65,7 +65,11 @@ function mostrarMedicos() {
     //.map((prod) => `${prod.nombre}: ${prod.especialidad} Contacto: ${prod.contacto.mail}`)
     //.join("<br>");
 
-    output.innerHTML = inventario
+    debugger;
+
+    try
+    {
+        output.innerHTML = inventario
     .map(prod => {
         return `
             <div>                
@@ -88,6 +92,12 @@ function mostrarMedicos() {
         `;
     })
     .join("");
+    }
+    catch
+    {
+        output.innerHTML = "Error al cargar los datos medicos";
+    }
+    
 }
 
 function orderMedicosByName() {
