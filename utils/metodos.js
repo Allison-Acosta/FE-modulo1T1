@@ -158,10 +158,19 @@ function evaluarTiempodeEspera()
       setTimeout(() => {
         alert("Ha llegado un nuevo paciente.");
         tiempos.push(20);
+
+        const espera = calcularPromedioEspera(tiempos);
+        contenedor.innerHTML = '';
+        contenedor.textContent = "El tiempo de espera es: "+espera+ " minutos."
+
     },3500);
     setTimeout(() => {
         alert("Ha llegado un nuevo paciente");
         tiempos.push(30);
+
+        const espera = calcularPromedioEspera(tiempos);
+        contenedor.innerHTML = '';
+        contenedor.textContent = "El tiempo de espera es: "+espera+ " minutos."
     },7000);
 }
 
@@ -199,13 +208,140 @@ function consultaMixta(numero)
 // metodo listener para el envio de formulario de contacto
 document.addEventListener("DOMContentLoaded", () => {
     const formulario = document.getElementById("formulario");
-    formulario.addEventListener("submit", (evento) => {
+    if (formulario) {
+        formulario.addEventListener("submit", (evento) => {
+            evento.preventDefault();
+            alert("Formulario enviado con éxito. ¡Gracias por tu interés!");
+        });
+    } else {
+        console.error("No se encontró el formulario con el ID 'formulario' PESTAÑA CONTACTO");
+    }
+});
+
+
+    //Funciones para las clases DOCTOR
+class Doctor {
+    constructor(nombre, especialidad, años, disponibilidad) {
+        this.nombre = nombre;
+        this.especialidad = especialidad;
+        this._años = años;
+        this.disponibilidad = disponibilidad; 
+        this.atenciones = 3;       
+    }
+
+    get años() {
+        return this._años;
+    }
+    set años(valor) {
+        if (valor >= 0) {  // Solo permitimos valores positivos para los años
+            this._años = valor;
+        } else {
+            console.log("El valor de 'años' no puede ser negativo.");
+        }
+    }
+
+    static buscarMedicoPorNombre(medicos, nombreBuscado) {
+        const medicoEncontrado = medicos.find(medico => medico.nombre.includes(nombreBuscado));
+        if (medicoEncontrado) {
+            console.log("se encontro =)");
+            return medicoEncontrado;
+        } else {
+            console.log("No se encontro nada!");
+            return null;
+        }
+    }
+
+    mostrarInformacion() {
+        console.log(`Nombre: ${this.nombre}`);
+        console.log(`Especialidad: ${this.especialidad}`);
+        console.log(`Años de experiencia: ${this.años}`);
+        console.log(`Disponibilidad: ${this.disponibilidad}`);
         
-        evento.preventDefault();
+    }
+}
+
+class Cirujano extends Doctor {
+    constructor(nombre, especialidad, años, disponibilidad, operacionesRealizadas) {
+        // Llamamos al constructor de la clase base (Doctor)
+        super(nombre, especialidad, años, disponibilidad);
+        this.operacionesRealizadas = operacionesRealizadas || 0;  // Si no se proporciona, por defecto será 0       
+}
+
+
+realizarOperacion() {
+    this.operacionesRealizadas++;
+    console.log(`Operación realizada. Total de operaciones: ${this.operacionesRealizadas}`);
+}
+}
+
+
+function crearMedicosDesdeJSON(jsonData) {
     
+    // Convertir el JSON a un array de objetos Medico
+    return jsonData.map(dato => new Doctor(
+        dato.nombre,
+        dato.especialidad,
+        dato.años,
+        dato.disponibilidad,
+       
+    ));
+}
+
+function buscarMedicoClass()
+{
+// Le pide al usuario un nombre a buscar
+const nombre = prompt("Indique el nombre del medico a buscar:");
+
+// Crea todas las clases medico (desde el .json)
+fetch('medicos.json') // Ruta al archivo JSON
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error al cargar el archivo JSON');
+        }
+        return response.json(); // Convertir la respuesta en JSON
+    })
+    .then(datosProfesionales => {
+        // Crear los objetos Medico a partir del JSON
+        const medicos = crearMedicosDesdeJSON(datosProfesionales);
+        console.log('Médicos cargados:', medicos);       
+
         
-        alert("Formulario enviado con éxito. ¡Gracias por tu interés!");
-        
-        
-      });
+        medicos.forEach(medico => medico.mostrarInformacion());
+// Leer el archivo JSON
+
+// busca al medico 
+const medico = Doctor.buscarMedicoPorNombre(medicos, nombre);
+console.log("estamos aca");
+
+if(medico)
+{   
+    const mensaje = `
+    Información de contacto de ${medico.nombre}:
+    - Especialidad: ${medico.especialidad}
+    - Pecientes Atendidos: ${medico.atenciones}           
+        `;
+
+
+
+    const contenedor = document.querySelector('.medBuscado');               
+    contenedor.innerHTML = '';
+    contenedor.textContent = mensaje;
+}
+else
+{   
+     const mensaje = `No se ha encontrado informacion del médico`;
+    const contenedor = document.querySelector('.medBuscado');               
+    contenedor.innerHTML = '';
+    contenedor.textContent = mensaje;
+
+}
+
+
+
+
+    })
+    .catch(error => {
+        console.error('Error al cargar el archivo JSON:', error);
     });
+   
+}
