@@ -151,7 +151,7 @@ function ordenarPorEspecialidad(inventario) {
 function cargarInventario() {
     const data = localStorage.getItem("medicos");
 
-    console.log(data);
+    //console.log(data);
     return data ? JSON.parse(data) : [];
 }
 
