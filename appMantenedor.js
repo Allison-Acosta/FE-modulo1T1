@@ -59,12 +59,16 @@ function agregarMedico() {
 
 
 function mostrarMedicos() {
+    
+    
     const inventario = cargarInventario();
     const output = document.getElementById("output");
     //output.innerHTML = inventario
     //.map((prod) => `${prod.nombre}: ${prod.especialidad} Contacto: ${prod.contacto.mail}`)
     //.join("<br>");
 
+    console.log("esto tenemos de inventario:");
+    console.log(inventario);
     output.innerHTML = inventario
     .map(prod => {
         return `
@@ -75,8 +79,8 @@ function mostrarMedicos() {
                 <p><strong>Disponibilidad:</strong> ${prod.disponibilidad === "true" ? "Disponible" : "No disponible"}</p>
                 <p><strong>Horarios:</strong></p>
                 <ul>
-                    <li><strong>AM:</strong> ${prod.horarios.AM.join(", ")}</li>
-                    <li><strong>PM:</strong> ${prod.horarios.PM.join(", ")}</li>
+                    <li><strong>AM:</strong> ${prod.horarios.AM}</li>
+                    <li><strong>PM:</strong> ${prod.horarios.PM}</li>
                 </ul>
                 <p><strong>Contacto:</strong></p>
                 <ul>
