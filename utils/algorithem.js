@@ -164,14 +164,14 @@ function guardarPaciente(paciente) {
     // Reviso el dato a guardar:
     console.log("Se guardará el siguiente dato");
     console.log(JSON.stringify(paciente));
-    localStorage.setItem("medicos", JSON.stringify(paciente));
+    localStorage.setItem("peciente", JSON.stringify(paciente));
 }
 
 function guardarInventario(medicos) {
     // Reviso el dato a guardar:
     console.log("Se guardará el siguiente dato");
     console.log(JSON.stringify(medicos));
-    localStorage.setItem("pacientes", JSON.stringify(medicos));
+    localStorage.setItem("medicos", JSON.stringify(medicos));
 }
 
 function cargarDatosIniciales() {
