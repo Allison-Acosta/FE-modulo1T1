@@ -1,20 +1,10 @@
-# MODULO 3 - Laboratorio 2
+# MODULO 3 - ENTREGA FINAL
 
 Allison Acosta
 
-1. Se crea una nueva ventana llamada Aranceles, (precios.html) ahi se pueden ver los precios de los servicios.
-   si son 2 consultas del mismo servicio se hace un descuento del 30%,
-   si son de distinto servicio se hace un descuento del 20%
-   SE USA CURRYing y composicion de funciones
-
-2. La respuesta de los presupuestos, se entrega con un retraso de 3 segundos.
-
-3. En contacto, hay un boton para evaluar el tiempo de espera, Este calcula el tiempo actual.
-   luego de unos segundos hay dos eventos de que llega un nuevo paciente.
-   Al llegar un nuevo paciente, se actualiza el tiempo de espera.
-
-4. En la pagina de equipo medico, se puede buscar el medico.
-   Al aparetar el boton, se crean las clases medicos (obtenidas desde el .json) y se muestra en pantalla la informacion del medico.
-   Se crrea un Try/Catch para el error de encontrar el archivo .json
-   Años será una propiedad privada. Para acceder a ella se hace un get y un set (encapsulacion)
-   Se crea una subclase cirujano. agregandole el paametro cirujiasRealizadas (herencia y polimorfismo)
+1. La entrega la haré sola.
+2. En el mantenedor medico se cargan los datos del medico.json (este link esta en el footer)
+3. Para busqueda y ordenamiento, se pueden ver en el mantenedor medico
+4. En la pagina de Equipo Medico, se recrea la clase Doctor. Ahi se usa el encapsulamiento para la experiencia, la herencia y el polimorfismo para crear la clase "Cirujano"
+5. Al pedir un presupuesto en aranceles o en Contacto -> evaluar proxima cita, se puede ver el uso de asyncronia.
+6. Se usa listener al finalizar el formulario de contacto.
